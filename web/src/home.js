@@ -168,14 +168,14 @@ const sendFile = async () => {
     if (image) {
       let formData = new FormData();
       formData.append("file", selectedFile);
-  
+      console.log("Here")
       try {
         const res = await axios({
           method: "post",
           url: process.env.REACT_APP_API_URL,
           data: formData,
         });
-  
+        console.log(res);
         if (res.status === 200) {
           setData(res.data);
         }
