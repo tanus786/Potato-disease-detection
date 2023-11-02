@@ -148,27 +148,10 @@ export const ImageUpload = () => {
   const [isLoading, setIsloading] = useState(false);
   let confidence = 0;
 
-//   const sendFile = async () => {
-//     if (image) {
-//       let formData = new FormData();
-//       formData.append("file", selectedFile);
-//       let res = await axios({
-//         method: "post",
-//         url: process.env.REACT_APP_API_URL,
-//         data: formData,
-//       });
-//       if (res.status === 200) {
-//         setData(res.data);
-//       }
-//       setIsloading(false);
-//     }
-//   }
-
 const sendFile = async () => {
     if (image) {
       let formData = new FormData();
       formData.append("file", selectedFile);
-      console.log("Here")
       try {
         const res = await axios({
           method: "post",
